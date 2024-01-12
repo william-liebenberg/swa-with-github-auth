@@ -10,6 +10,10 @@
         }
     },
     "routes": [
+        {
+            "route": "/weather/*",
+            "allowedRoles": ["authenticated"]
+        }
     ],
     "navigationFallback": {
         "rewrite": "/index.html",
