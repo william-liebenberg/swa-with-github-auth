@@ -11,7 +11,7 @@
     },
     "routes": [
         {
-            "route": "/weather/*",
+            "route": "/weather*",
             "allowedRoles": ["authenticated"]
         }
     ],
