@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -6,7 +7,14 @@
 
     <main>
         <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <AuthorizeView>
+                <Authorized>
+                    <strong>Auth provider:&nbsp;</strong>@context.User.Identity.AuthenticationType
+                </Authorized>
+                <NotAuthorized>
+                    <strong>Auth provider:&nbsp;</strong>Not logged in
+                </NotAuthorized>
+            </AuthorizeView>
         </div>
 
         <article class="content px-4">
