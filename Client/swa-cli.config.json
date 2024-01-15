@@ -4,7 +4,7 @@
     "localblazorswa": {
       "appLocation": ".",
       "outputLocation": ".\\bin\\debug\\net8.0",
-      "swaConfigLocation": "wwwroot",
+      "swaConfigLocation": ".",
       "appBuildCommand": "dotnet publish -c Release -o bin",
       "run": "dotnet watch run",
       "appDevserverUrl": "http://localhost:5105",
