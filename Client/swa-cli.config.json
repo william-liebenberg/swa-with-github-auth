@@ -8,7 +8,8 @@
       "appBuildCommand": "dotnet publish -c Release -o bin",
       "run": "dotnet watch run",
       "appDevserverUrl": "http://localhost:5105",
-      "appName": "BlazorSwa"
+      "appName": "BlazorSwa",
+      "open": false
     }
   }
 }

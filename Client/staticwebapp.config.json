@@ -4,8 +4,8 @@
       "github": {
         "enabled": true,
         "registration": {
-          "clientIdSettingName": "GITHUB_CLIENT_ID",
-          "clientSecretSettingName": "GITHUB_CLIENT_SECRET"
+          "clientIdSettingName": "BlazorSwa_GITHUB_CLIENT_ID",
+          "clientSecretSettingName": "BlazorSwa_GITHUB_CLIENT_SECRET"
         }
       }
     }
