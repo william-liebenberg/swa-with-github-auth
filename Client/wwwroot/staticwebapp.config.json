@@ -16,11 +16,19 @@
       "allowedRoles": [
         "authenticated"
       ]
+    },
+    {
+      "route": "/login",
+      "rewrite": "/.auth/login/github"
+    },
+    {
+      "route": "/logout",
+      "redirect": "/.auth/logout"
     }
   ],
   "responseOverrides": {
     "401": {
-      "redirect": "/.auth/login/github?post_login_redirect_uri=.referrer",
+      "redirect": "/login",
       "statusCode": 302
     }
   },
