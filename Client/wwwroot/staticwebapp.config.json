@@ -1,26 +1,38 @@
 {
-    "auth": {
-        "identityProviders": {
-            "github": {
-                "registration": {
-                    "clientIdSettingName": "GITHUB_CLIENT_ID",
-                    "clientSecretSettingName": "GITHUB_CLIENT_SECRET"
-                }
-            }
+  "auth": {
+    "identityProviders": {
+      "github": {
+        "enabled": true,
+        "registration": {
+          "clientIdSettingName": "GITHUB_CLIENT_ID",
+          "clientSecretSettingName": "GITHUB_CLIENT_SECRET"
         }
-    },
-    "routes": [
-        {
-            "route": "/weather*",
-            "allowedRoles": ["authenticated"]
-        }
-    ],
-    "navigationFallback": {
-        "rewrite": "/index.html",
-        "exclude": [
-            "/images/*.{png,jpg,gif}",
-            "/css/*",
-            "/api/*"
-        ]
+      }
     }
+  },
+  "routes": [
+    {
+      "route": "/weather*",
+      "allowedRoles": [
+        "authenticated"
+      ]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/.auth/login/github?post_login_redirect_uri=.referrer",
+      "statusCode": 302
+    }
+  },
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/images/*.{png,jpg,gif}",
+      "/css/*",
+      "/api/*"
+    ]
+  },
+  "globalHeaders": {
+    "Cache-Control": "no-cache"
+  }
 }

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "localblazorswa": {
+      "appLocation": ".",
+      "outputLocation": ".\\bin\\debug\\net8.0",
+      "swaConfigLocation": "wwwroot",
+      "appBuildCommand": "dotnet publish -c Release -o bin",
+      "run": "dotnet watch run",
+      "appDevserverUrl": "http://localhost:5105",
+      "appName": "BlazorSwa"
+    }
+  }
+}
