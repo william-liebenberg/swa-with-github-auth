@@ -3,9 +3,16 @@
     "identityProviders": {
       "github": {
         "enabled": true,
+        "userDetailsClaim": "",
         "registration": {
           "clientIdSettingName": "BlazorSwa_GITHUB_CLIENT_ID",
           "clientSecretSettingName": "BlazorSwa_GITHUB_CLIENT_SECRET"
+        },
+        "login": {
+          "scopes": [
+            "public_profile",
+            "email"
+          ]
         }
       }
     }
